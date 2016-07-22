@@ -17,6 +17,7 @@ protocol DetailedSceneViewControllerOutput {
 }
 
 class DetailedSceneViewController: UIViewController, DetailedSceneViewControllerInput {
+  
   var output: DetailedSceneViewControllerOutput!
   var router: DetailedSceneRouter!
   

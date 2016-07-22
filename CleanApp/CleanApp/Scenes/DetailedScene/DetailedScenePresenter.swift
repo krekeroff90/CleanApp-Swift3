@@ -17,6 +17,7 @@ protocol DetailedScenePresenterOutput: class {
 }
 
 class DetailedScenePresenter: DetailedScenePresenterInput {
+  
   weak var output: DetailedScenePresenterOutput!
   // MARK: Presentation logic
   func presentSomething(response: DetailedSceneResponse) {
