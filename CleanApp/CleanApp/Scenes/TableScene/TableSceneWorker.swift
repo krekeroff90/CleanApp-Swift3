@@ -10,6 +10,7 @@ import UIKit
 
 class TableSceneWorker {
   
+  /// Наш сервис обращается к менеджеру и позвращает результат в интерактор
   func loadList(callback: (videos: Array<VideoEntity>) -> Void) {
     let playlistID = VideoPlaylist()
     YoutubeManager.sharedInstance.getVideosForChannelWithPlaylistID(playlistID: playlistID) { array -> Void in

@@ -23,21 +23,25 @@ class TableSceneViewController: UITableViewController, TableSceneViewControllerI
   var router: TableSceneRouter!
   var videoArray: Array<VideoEntity>! = []
   
+  /// Нстройка контроллера при старте
   override func awakeFromNib() {
     super.awakeFromNib()
     TableSceneConfigurator.sharedInstance.configure(viewController: self)
   }
   
+  /// При полной загрузке делаем запрос данных
   override func viewDidLoad() {
     super.viewDidLoad()
     loadData()
   }
   
+  /// Передаем запрос далее в интерактор
   func loadData() {
     let request = TableSceneRequest()
     output.doRequest(request: request)
   }
   
+  /// Данные вернулись, их можно показать в контроллере
   func displayData(viewModel: TableSceneViewModel) {
     self.videoArray = viewModel.array
     tableView.reloadData()

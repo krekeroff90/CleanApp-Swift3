@@ -23,6 +23,7 @@ class TableSceneInteractor: TableSceneInteractorInput {
   var worker: TableSceneWorker!
   var videos: [VideoEntity]?
   
+  /// Показали, что был послан запрос, запускаем сервис и обрабатываем результат
   func doRequest(request: TableSceneRequest) {
     worker = TableSceneWorker()
     worker.loadList { videos -> Void in

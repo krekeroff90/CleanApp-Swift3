@@ -113,7 +113,6 @@
 				AD9D31911D419BD5005B2EAE /* Application */,
 				AD9D31961D419C24005B2EAE /* Managers */,
 				AD9D31921D419BDF005B2EAE /* Assets */,
-				AD9D31971D419C32005B2EAE /* Vendors */,
 				AD9D31931D419BE9005B2EAE /* SupportFiles */,
 				AD9D31951D419C03005B2EAE /* Frameworks */,
 			);
@@ -185,13 +184,6 @@
 				ADAE3AED1D41B021007E84BB /* YoutubeManager.swift */,
 			);
 			name = Managers;
-			sourceTree = "<group>";
-		};
-		AD9D31971D419C32005B2EAE /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Vendors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -16,10 +16,12 @@ class DetailedSceneRouter: DetailedSceneRouterInput {
   
   weak var viewController: DetailedSceneViewController!
 
+  /// Здесь можно произвести переход без использования сегвея
   func navigateToNextController() {
 
   }
   
+  /// Передача данных в следующий контроллер через сегвей
   func passDataToNextScene(segue: UIStoryboardSegue) {
     if segue.identifier == "OtherScene" {
       

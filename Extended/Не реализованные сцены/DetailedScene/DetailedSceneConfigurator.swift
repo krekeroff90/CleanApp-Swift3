@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import XCDYouTubeKit
+
+// MARK: Connect View, Interactor, and Presenter
 
 extension DetailedSceneViewController: DetailedScenePresenterOutput {
-  /// Переопределяем сегвей для контроллера
   override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
     router.passDataToNextScene(segue: segue)
   }
@@ -20,27 +20,25 @@ extension DetailedSceneInteractor: DetailedSceneViewControllerOutput {}
 extension DetailedScenePresenter: DetailedSceneInteractorOutput {}
 
 class DetailedSceneConfigurator {
-  /// Настройка производится лишь один раз
+  // MARK: Object lifecycle
   class var sharedInstance: DetailedSceneConfigurator {
     return DetailedSceneConfigurator()
   }
   
-  /// Настройка и конфигурация контроллера
+  // MARK: Configuration
   func configure(viewController: DetailedSceneViewController) {
-    /// Создаем роутер
+    
     let router = DetailedSceneRouter()
     router.viewController = viewController
-    /// Создаем презентер
+    
     let presenter = DetailedScenePresenter()
     presenter.output = viewController
-    /// Создаем интерактор
+    
     let interactor = DetailedSceneInteractor()
     interactor.output = presenter
-    /// Связываем контроллер с иницированными зависимостями
+    
     viewController.output = interactor
     viewController.router = router
-    /// Создаем плеер для последующей работы с ним
-    viewController.videoPlayerViewController = XCDYouTubeVideoPlayerViewController()
   }
   
 }

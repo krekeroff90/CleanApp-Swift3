@@ -8,12 +8,15 @@
 
 import UIKit
 
-struct DetailedSceneRequest {}
+/// Модель данных, специфичная для данного контроллера
 
+/// Общий запрос
+struct DetailedSceneRequest {}
+/// Формат ответа
 struct DetailedSceneResponse {
   var video: VideoEntity
 }
-
+/// Модель представления
 struct DetailedSceneViewModel {
   var videoID: String!
 }
