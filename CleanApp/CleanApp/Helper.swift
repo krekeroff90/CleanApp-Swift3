@@ -8,3 +8,7 @@
 
 import Foundation
 import UIKit
+
+func VideoPlaylist() -> String! {
+  return Config.PlaylistID
+} // func News

@@ -8,14 +8,12 @@
 
 import UIKit
 
-struct TableSceneRequest {
-
-}
+struct TableSceneRequest {}
 
 struct TableSceneResponse {
-
+  var array = Array<VideoEntity>()
 }
 
 struct TableSceneViewModel {
-
+  var array = Array<VideoEntity>()
 }

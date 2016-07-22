@@ -7,45 +7,44 @@
 //
 
 import UIKit
+import XCDYouTubeKit
 
 protocol DetailedSceneViewControllerInput {
-  func displaySomething(viewModel: DetailedSceneViewModel)
+  func displayVideo(viewModel: DetailedSceneViewModel)
 }
 
 protocol DetailedSceneViewControllerOutput {
-  func doSomething(request: DetailedSceneRequest)
+  var video: VideoEntity! { get set }
+  func getVideoID(request: DetailedSceneRequest)
 }
 
 class DetailedSceneViewController: UIViewController, DetailedSceneViewControllerInput {
   
+  @IBOutlet weak var videoContainerView: UIView!
+  var videoPlayerViewController: XCDYouTubeVideoPlayerViewController!
+  
   var output: DetailedSceneViewControllerOutput!
   var router: DetailedSceneRouter!
   
-  // MARK: Object lifecycle
   override func awakeFromNib() {
     super.awakeFromNib()
     DetailedSceneConfigurator.sharedInstance.configure(viewController: self)
   }
   
-  // MARK: View lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    doSomethingOnLoad()
+    getVideoID()
   }
   
-  // MARK: Event handling
-  
-  func doSomethingOnLoad() {
-    // NOTE: Ask the Interactor to do some work
+  func getVideoID() {
     let request = DetailedSceneRequest()
-    output.doSomething(request: request)
+    output.getVideoID(request: request)
   }
   
-  // MARK: Display logic
-  
-  func displaySomething(viewModel: DetailedSceneViewModel) {
-    // NOTE: Display the result from the Presenter
-    // nameTextField.text = viewModel.name
+  func displayVideo(viewModel: DetailedSceneViewModel) {
+    videoPlayerViewController.present(in: videoContainerView)
+    videoPlayerViewController.videoIdentifier = viewModel.videoID
+    videoPlayerViewController.moviePlayer.prepareToPlay()
   }
   
 }

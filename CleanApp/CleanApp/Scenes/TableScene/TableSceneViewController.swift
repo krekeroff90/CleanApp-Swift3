@@ -9,39 +9,74 @@
 import UIKit
 
 protocol TableSceneViewControllerInput {
-  func displaySomething(viewModel: TableSceneViewModel)
+  func displayData(viewModel: TableSceneViewModel)
 }
 
 protocol TableSceneViewControllerOutput {
-  func doSomething(request: TableSceneRequest)
+  func doRequest(request: TableSceneRequest)
+  var videos: [VideoEntity]? { get }
 }
 
 class TableSceneViewController: UITableViewController, TableSceneViewControllerInput {
+  
   var output: TableSceneViewControllerOutput!
   var router: TableSceneRouter!
-  // MARK: Object lifecycle
+  var videoArray: Array<VideoEntity>! = []
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     TableSceneConfigurator.sharedInstance.configure(viewController: self)
   }
   
-  // MARK: View lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    doSomethingOnLoad()
+    loadData()
   }
   
-  // MARK: Event handling
-  func doSomethingOnLoad() {
-    // NOTE: Ask the Interactor to do some work
+  func loadData() {
     let request = TableSceneRequest()
-    output.doSomething(request: request)
+    output.doRequest(request: request)
   }
   
-  // MARK: Display logic
-  func displaySomething(viewModel: TableSceneViewModel) {
-    // NOTE: Display the result from the Presenter
-    // nameTextField.text = viewModel.name
+  func displayData(viewModel: TableSceneViewModel) {
+    self.videoArray = viewModel.array
+    tableView.reloadData()
+  }
+  
+  // MARK: TableView DataSource
+  
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+  }
+  
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return videoArray.count
+  }
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let videoitem = videoArray[(indexPath as IndexPath).row]
+    var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+    if cell == nil {
+      cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+    }
+    cell?.textLabel?.text = videoitem.title
+    cell?.detailTextLabel?.text = videoitem.description
+    return cell!
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

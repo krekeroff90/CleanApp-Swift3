@@ -9,25 +9,22 @@
 import UIKit
 
 protocol DetailedSceneInteractorInput {
-  func doSomething(request: DetailedSceneRequest)
+  var video: VideoEntity! { get set }
+  func getVideoID(request: DetailedSceneRequest)
 }
 
 protocol DetailedSceneInteractorOutput {
-  func presentSomething(response: DetailedSceneResponse)
+  func presentVideo(response: DetailedSceneResponse)
 }
 
 class DetailedSceneInteractor: DetailedSceneInteractorInput {
   
   var output: DetailedSceneInteractorOutput!
-  var worker: DetailedSceneWorker!
-  // MARK: Business logic
-  func doSomething(request: DetailedSceneRequest) {
-    // NOTE: Create some Worker to do the work
-    worker = DetailedSceneWorker()
-    worker.doSomeWork()
-    // NOTE: Pass the result to the Presenter
-    let response = DetailedSceneResponse()
-    output.presentSomething(response: response)
+  var video: VideoEntity!
+  
+  func getVideoID(request: DetailedSceneRequest) {
+    let response = DetailedSceneResponse(video: video)
+    output.presentVideo(response: response)
   }
   
 }
