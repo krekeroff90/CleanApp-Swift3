@@ -20,6 +20,7 @@ class TableScenePresenter: TableScenePresenterInput {
   
   weak var output: TableScenePresenterOutput!
   
+  /// Возвращаем полученные данные для отображения в контроллере
   func presentData(response: TableSceneResponse) {
     let viewModel = TableSceneViewModel(array: response.array)
     output.displayData(viewModel: viewModel)

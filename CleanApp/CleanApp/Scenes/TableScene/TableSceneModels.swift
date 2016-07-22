@@ -8,12 +8,15 @@
 
 import UIKit
 
-struct TableSceneRequest {}
+/// Модель данных, специфичная для данного контроллера
 
+/// Общий запрос
+struct TableSceneRequest {}
+/// Формат ответа
 struct TableSceneResponse {
   var array = Array<VideoEntity>()
 }
-
+/// Модель представления
 struct TableSceneViewModel {
   var array = Array<VideoEntity>()
 }

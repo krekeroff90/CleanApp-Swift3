@@ -22,6 +22,7 @@ class DetailedSceneInteractor: DetailedSceneInteractorInput {
   var output: DetailedSceneInteractorOutput!
   var video: VideoEntity!
   
+  /// Показали, что был послан запрос и обрабатываем результат
   func getVideoID(request: DetailedSceneRequest) {
     let response = DetailedSceneResponse(video: video)
     output.presentVideo(response: response)

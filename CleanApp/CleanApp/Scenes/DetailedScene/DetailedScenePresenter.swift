@@ -20,6 +20,7 @@ class DetailedScenePresenter: DetailedScenePresenterInput {
   
   weak var output: DetailedScenePresenterOutput!
   
+  /// Возвращаем полученные данные для отображения в контроллере
   func presentVideo(response: DetailedSceneResponse) {
     let viewModel = DetailedSceneViewModel(videoID: response.video.videoID)
     output.displayVideo(viewModel: viewModel)

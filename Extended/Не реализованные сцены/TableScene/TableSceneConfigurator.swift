@@ -8,8 +8,9 @@
 
 import UIKit
 
+// MARK: Connect View, Interactor, and Presenter
+
 extension TableSceneViewController: TableScenePresenterOutput {
-  /// Переопределяем сегвей для контроллера
   override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
     router.passDataToNextScene(segue: segue)
   }
@@ -19,23 +20,23 @@ extension TableSceneInteractor: TableSceneViewControllerOutput {}
 extension TableScenePresenter: TableSceneInteractorOutput {}
 
 class TableSceneConfigurator {
-  /// Настройка производится лишь один раз
+  // MARK: Object lifecycle
   class var sharedInstance: TableSceneConfigurator {
     return TableSceneConfigurator()
   }
   
-  /// Настройка и конфигурация контроллера
+  // MARK: Configuration
   func configure(viewController: TableSceneViewController) {
-    /// Создаем роутер
+    
     let router = TableSceneRouter()
     router.viewController = viewController
-    /// Создаем презентер
+    
     let presenter = TableScenePresenter()
     presenter.output = viewController
-    /// Создаем интерактор
+    
     let interactor = TableSceneInteractor()
     interactor.output = presenter
-    /// Связываем контроллер с иницированными зависимостями
+    
     viewController.output = interactor
     viewController.router = router
   }

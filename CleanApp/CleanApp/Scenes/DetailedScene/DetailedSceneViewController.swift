@@ -26,21 +26,25 @@ class DetailedSceneViewController: UIViewController, DetailedSceneViewController
   var output: DetailedSceneViewControllerOutput!
   var router: DetailedSceneRouter!
   
+  /// Нстройка контроллера при старте
   override func awakeFromNib() {
     super.awakeFromNib()
     DetailedSceneConfigurator.sharedInstance.configure(viewController: self)
   }
   
+  /// При полной загрузке делаем запрос данных
   override func viewDidLoad() {
     super.viewDidLoad()
     getVideoID()
   }
   
+  /// Передаем запрос далее в интерактор
   func getVideoID() {
     let request = DetailedSceneRequest()
     output.getVideoID(request: request)
   }
   
+  /// Данные вернулись, их можно показать в контроллере
   func displayVideo(viewModel: DetailedSceneViewModel) {
     videoPlayerViewController.present(in: videoContainerView)
     videoPlayerViewController.videoIdentifier = viewModel.videoID
