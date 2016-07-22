@@ -8,8 +8,6 @@
 
 import UIKit
 
-// MARK: Connect View, Interactor, and Presenter
-
 extension TableSceneViewController: TableScenePresenterOutput {
   override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
     router.passDataToNextScene(segue: segue)
@@ -20,12 +18,11 @@ extension TableSceneInteractor: TableSceneViewControllerOutput {}
 extension TableScenePresenter: TableSceneInteractorOutput {}
 
 class TableSceneConfigurator {
-  // MARK: Object lifecycle
+  
   class var sharedInstance: TableSceneConfigurator {
     return TableSceneConfigurator()
   }
   
-  // MARK: Configuration
   func configure(viewController: TableSceneViewController) {
     
     let router = TableSceneRouter()

@@ -30,6 +30,7 @@
 		ADAE3AEC1D41AC37007E84BB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3AEB1D41AC37007E84BB /* Config.swift */; };
 		ADAE3AEE1D41B021007E84BB /* YoutubeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3AED1D41B021007E84BB /* YoutubeManager.swift */; };
 		ADAE3AF01D41B08E007E84BB /* VideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3AEF1D41B08E007E84BB /* VideoEntity.swift */; };
+		ADDD8D021D41E970008210CA /* XCDYouTubeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDD8D011D41E970008210CA /* XCDYouTubeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		ADAE3AEB1D41AC37007E84BB /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		ADAE3AED1D41B021007E84BB /* YoutubeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeManager.swift; sourceTree = "<group>"; };
 		ADAE3AEF1D41B08E007E84BB /* VideoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEntity.swift; sourceTree = "<group>"; };
+		ADDD8D011D41E970008210CA /* XCDYouTubeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XCDYouTubeKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDD8D021D41E970008210CA /* XCDYouTubeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +174,7 @@
 		AD9D31951D419C03005B2EAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADDD8D011D41E970008210CA /* XCDYouTubeKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,6 +204,7 @@
 				AD6AC50A1D4189070048D195 /* Sources */,
 				AD6AC50B1D4189070048D195 /* Frameworks */,
 				AD6AC50C1D4189070048D195 /* Resources */,
+				ADD67ABF1D41F1AC007610C3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -258,6 +263,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ADD67ABF1D41F1AC007610C3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/XCDYouTubeKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD6AC50A1D4189070048D195 /* Sources */ = {
@@ -400,6 +422,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CleanApp",
+				);
 				INFOPLIST_FILE = CleanApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.instarobot.CleanApp;
@@ -412,6 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CleanApp",
+				);
 				INFOPLIST_FILE = CleanApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.instarobot.CleanApp;

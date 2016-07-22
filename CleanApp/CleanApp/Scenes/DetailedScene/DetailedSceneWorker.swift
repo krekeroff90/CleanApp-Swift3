@@ -9,8 +9,7 @@
 import UIKit
 
 class DetailedSceneWorker {
-  // MARK: Business Logic
-  func doSomeWork() {
-    // NOTE: Do the work
-  }
+  
+  
+  
 }

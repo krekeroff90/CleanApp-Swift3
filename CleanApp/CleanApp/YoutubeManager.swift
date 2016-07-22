@@ -11,16 +11,16 @@ import UIKit
 
 class YoutubeManager {
   
-  /// Singlton for YoutubeManager Class
+  /// Синглтон для YoutubeManager
   static let sharedInstance = YoutubeManager()
   
   /**
-   Get videos from playlist
-   - parameter playlistID: ID for playlist (as String!)
+   Получение массива с сущностями "Видео"
+   - parameter playlistID: ID нашего плейлиста (не опциональная строка)
    */
   func getVideosForChannelWithPlaylistID(playlistID: String!, completion: (array: Array<VideoEntity>) -> Void) {
-    let urlString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&maxResults=50&playlistId=\(playlistID)&key=\(Config.GoogleDataKey)"
-    let targetURL = NSURL(string: urlString)
+    let urlString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&maxResults=50&playlistId=\(playlistID!)&key=\(Config.GoogleDataKey)"
+    let targetURL = URL(string: urlString)
     performGetRequest(targetURL: targetURL) { data, HTTPStatusCode, error -> Void in
       if HTTPStatusCode == 200 && error == nil {
         do {
@@ -54,12 +54,12 @@ class YoutubeManager {
 /// Helper for perform data request
 extension YoutubeManager {
   /**
-   Perform "GET" request to YouTube service
-   - parameter targetURL:  url for request (NSURL!)
-   - parameter completion: completion handler block
+   Подготавливаем "GET" запрос к нашему YouTube сервису
+   - parameter targetURL:  ссылка для запроса (NSURL!)
+   - parameter completion: комплишен результата отработанного запроса
    */
   private func performGetRequest(targetURL: NSURL!, completion: (data: NSData?, HTTPStatusCode: Int, error: NSError?) -> Void) {
-    let request = NSMutableURLRequest(url: targetURL as URL)
+    let request = NSMutableURLRequest(url: targetURL! as URL)
     request.httpMethod = "GET"
     let sessionConfiguration = URLSessionConfiguration.default
     let session = URLSession(configuration: sessionConfiguration)

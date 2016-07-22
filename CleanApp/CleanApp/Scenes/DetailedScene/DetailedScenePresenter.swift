@@ -9,21 +9,20 @@
 import UIKit
 
 protocol DetailedScenePresenterInput {
-  func presentSomething(response: DetailedSceneResponse)
+  func presentVideo(response: DetailedSceneResponse)
 }
 
 protocol DetailedScenePresenterOutput: class {
-  func displaySomething(viewModel: DetailedSceneViewModel)
+  func displayVideo(viewModel: DetailedSceneViewModel)
 }
 
 class DetailedScenePresenter: DetailedScenePresenterInput {
   
   weak var output: DetailedScenePresenterOutput!
-  // MARK: Presentation logic
-  func presentSomething(response: DetailedSceneResponse) {
-    // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-    let viewModel = DetailedSceneViewModel()
-    output.displaySomething(viewModel: viewModel)
+  
+  func presentVideo(response: DetailedSceneResponse) {
+    let viewModel = DetailedSceneViewModel(videoID: response.video.videoID)
+    output.displayVideo(viewModel: viewModel)
   }
   
 }

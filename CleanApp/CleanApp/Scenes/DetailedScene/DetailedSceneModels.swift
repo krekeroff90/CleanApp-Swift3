@@ -8,14 +8,12 @@
 
 import UIKit
 
-struct DetailedSceneRequest {
-
-}
+struct DetailedSceneRequest {}
 
 struct DetailedSceneResponse {
-
+  var video: VideoEntity
 }
 
 struct DetailedSceneViewModel {
-
+  var videoID: String!
 }

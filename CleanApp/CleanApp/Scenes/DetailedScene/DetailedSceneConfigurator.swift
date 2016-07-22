@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-// MARK: Connect View, Interactor, and Presenter
+import XCDYouTubeKit
 
 extension DetailedSceneViewController: DetailedScenePresenterOutput {
   override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -20,12 +19,11 @@ extension DetailedSceneInteractor: DetailedSceneViewControllerOutput {}
 extension DetailedScenePresenter: DetailedSceneInteractorOutput {}
 
 class DetailedSceneConfigurator {
-  // MARK: Object lifecycle
+  
   class var sharedInstance: DetailedSceneConfigurator {
     return DetailedSceneConfigurator()
   }
   
-  // MARK: Configuration
   func configure(viewController: DetailedSceneViewController) {
     
     let router = DetailedSceneRouter()
@@ -39,6 +37,8 @@ class DetailedSceneConfigurator {
     
     viewController.output = interactor
     viewController.router = router
+    
+    viewController.videoPlayerViewController = XCDYouTubeVideoPlayerViewController()
   }
   
 }

@@ -9,21 +9,20 @@
 import UIKit
 
 protocol TableScenePresenterInput {
-  func presentSomething(response: TableSceneResponse)
+  func presentData(response: TableSceneResponse)
 }
 
 protocol TableScenePresenterOutput: class {
-  func displaySomething(viewModel: TableSceneViewModel)
+  func displayData(viewModel: TableSceneViewModel)
 }
 
 class TableScenePresenter: TableScenePresenterInput {
   
   weak var output: TableScenePresenterOutput!
-  // MARK: Presentation logic
-  func presentSomething(response: TableSceneResponse) {
-    // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-    let viewModel = TableSceneViewModel()
-    output.displaySomething(viewModel: viewModel)
+  
+  func presentData(response: TableSceneResponse) {
+    let viewModel = TableSceneViewModel(array: response.array)
+    output.displayData(viewModel: viewModel)
   }
   
 }

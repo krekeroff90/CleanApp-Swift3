@@ -9,8 +9,12 @@
 import UIKit
 
 class TableSceneWorker {
-  // MARK: Business Logic
-  func doSomeWork() {
-    // NOTE: Do the work
+  
+  func loadList(callback: (videos: Array<VideoEntity>) -> Void) {
+    let playlistID = VideoPlaylist()
+    YoutubeManager.sharedInstance.getVideosForChannelWithPlaylistID(playlistID: playlistID) { array -> Void in
+      callback(videos: array)
+    }
   }
+  
 }

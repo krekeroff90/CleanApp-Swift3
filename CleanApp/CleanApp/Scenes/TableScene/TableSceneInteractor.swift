@@ -9,25 +9,27 @@
 import UIKit
 
 protocol TableSceneInteractorInput {
-  func doSomething(request: TableSceneRequest)
+  func doRequest(request: TableSceneRequest)
+  var videos: [VideoEntity]? { get }
 }
 
 protocol TableSceneInteractorOutput {
-  func presentSomething(response: TableSceneResponse)
+  func presentData(response: TableSceneResponse)
 }
 
 class TableSceneInteractor: TableSceneInteractorInput {
   
   var output: TableSceneInteractorOutput!
   var worker: TableSceneWorker!
-  // MARK: Business logic
-  func doSomething(request: TableSceneRequest) {
-    // NOTE: Create some Worker to do the work
+  var videos: [VideoEntity]?
+  
+  func doRequest(request: TableSceneRequest) {
     worker = TableSceneWorker()
-    worker.doSomeWork()
-    // NOTE: Pass the result to the Presenter
-    let response = TableSceneResponse()
-    output.presentSomething(response: response)
+    worker.loadList { videos -> Void in
+      self.videos = videos
+      let response = TableSceneResponse(array: self.videos!)
+      self.output.presentData(response: response)
+    }
   }
   
 }
