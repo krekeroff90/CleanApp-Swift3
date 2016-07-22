@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD4E9F3D1D41A587000F6E49 /* LICENSE.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E9F3C1D41A587000F6E49 /* LICENSE.swift */; };
+		AD4E9F461D41A987000F6E49 /* DetailedSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E9F3F1D41A987000F6E49 /* DetailedSceneConfigurator.swift */; };
+		AD4E9F471D41A987000F6E49 /* DetailedSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E9F401D41A987000F6E49 /* DetailedSceneInteractor.swift */; };
+		AD4E9F481D41A987000F6E49 /* DetailedSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E9F411D41A987000F6E49 /* DetailedSceneModels.swift */; };
+		AD4E9F491D41A987000F6E49 /* DetailedScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E9F421D41A987000F6E49 /* DetailedScenePresenter.swift */; };
+		AD4E9F4A1D41A987000F6E49 /* DetailedSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E9F431D41A987000F6E49 /* DetailedSceneRouter.swift */; };
+		AD4E9F4B1D41A987000F6E49 /* DetailedSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E9F441D41A987000F6E49 /* DetailedSceneViewController.swift */; };
+		AD4E9F4C1D41A987000F6E49 /* DetailedSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4E9F451D41A987000F6E49 /* DetailedSceneWorker.swift */; };
 		AD6AC5121D4189070048D195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6AC5111D4189070048D195 /* AppDelegate.swift */; };
 		AD6AC5171D4189070048D195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6AC5151D4189070048D195 /* Main.storyboard */; };
 		AD6AC5191D4189070048D195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6AC5181D4189070048D195 /* Assets.xcassets */; };
@@ -21,6 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD4E9F3C1D41A587000F6E49 /* LICENSE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LICENSE.swift; sourceTree = "<group>"; };
+		AD4E9F3F1D41A987000F6E49 /* DetailedSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedSceneConfigurator.swift; path = Scenes/DetailedScene/DetailedSceneConfigurator.swift; sourceTree = "<group>"; };
+		AD4E9F401D41A987000F6E49 /* DetailedSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedSceneInteractor.swift; path = Scenes/DetailedScene/DetailedSceneInteractor.swift; sourceTree = "<group>"; };
+		AD4E9F411D41A987000F6E49 /* DetailedSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedSceneModels.swift; path = Scenes/DetailedScene/DetailedSceneModels.swift; sourceTree = "<group>"; };
+		AD4E9F421D41A987000F6E49 /* DetailedScenePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedScenePresenter.swift; path = Scenes/DetailedScene/DetailedScenePresenter.swift; sourceTree = "<group>"; };
+		AD4E9F431D41A987000F6E49 /* DetailedSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedSceneRouter.swift; path = Scenes/DetailedScene/DetailedSceneRouter.swift; sourceTree = "<group>"; };
+		AD4E9F441D41A987000F6E49 /* DetailedSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedSceneViewController.swift; path = Scenes/DetailedScene/DetailedSceneViewController.swift; sourceTree = "<group>"; };
+		AD4E9F451D41A987000F6E49 /* DetailedSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailedSceneWorker.swift; path = Scenes/DetailedScene/DetailedSceneWorker.swift; sourceTree = "<group>"; };
 		AD6AC50E1D4189070048D195 /* CleanApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6AC5111D4189070048D195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6AC5161D4189070048D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +63,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD4E9F3E1D41A917000F6E49 /* DetailedScene */ = {
+			isa = PBXGroup;
+			children = (
+				AD4E9F3F1D41A987000F6E49 /* DetailedSceneConfigurator.swift */,
+				AD4E9F401D41A987000F6E49 /* DetailedSceneInteractor.swift */,
+				AD4E9F411D41A987000F6E49 /* DetailedSceneModels.swift */,
+				AD4E9F421D41A987000F6E49 /* DetailedScenePresenter.swift */,
+				AD4E9F431D41A987000F6E49 /* DetailedSceneRouter.swift */,
+				AD4E9F441D41A987000F6E49 /* DetailedSceneViewController.swift */,
+				AD4E9F451D41A987000F6E49 /* DetailedSceneWorker.swift */,
+			);
+			name = DetailedScene;
+			sourceTree = "<group>";
+		};
 		AD6AC5051D4189070048D195 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +96,7 @@
 		AD6AC5101D4189070048D195 /* CleanApp */ = {
 			isa = PBXGroup;
 			children = (
+				AD4E9F3C1D41A587000F6E49 /* LICENSE.swift */,
 				AD6AC5151D4189070048D195 /* Main.storyboard */,
 				AD9D31941D419BF8005B2EAE /* Scenes */,
 				AD9D31911D419BD5005B2EAE /* Application */,
@@ -121,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				AD854D331D419D3A00BEEB1D /* TableScene */,
+				AD4E9F3E1D41A917000F6E49 /* DetailedScene */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -221,13 +253,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD854D3B1D419D7D00BEEB1D /* TableSceneConfigurator.swift in Sources */,
+				AD4E9F461D41A987000F6E49 /* DetailedSceneConfigurator.swift in Sources */,
+				AD4E9F481D41A987000F6E49 /* DetailedSceneModels.swift in Sources */,
 				AD854D411D419D7D00BEEB1D /* TableSceneWorker.swift in Sources */,
+				AD4E9F491D41A987000F6E49 /* DetailedScenePresenter.swift in Sources */,
 				AD6AC5121D4189070048D195 /* AppDelegate.swift in Sources */,
 				AD854D3E1D419D7D00BEEB1D /* TableScenePresenter.swift in Sources */,
 				AD854D3C1D419D7D00BEEB1D /* TableSceneInteractor.swift in Sources */,
+				AD4E9F4C1D41A987000F6E49 /* DetailedSceneWorker.swift in Sources */,
+				AD4E9F471D41A987000F6E49 /* DetailedSceneInteractor.swift in Sources */,
+				AD4E9F4A1D41A987000F6E49 /* DetailedSceneRouter.swift in Sources */,
 				AD854D3F1D419D7D00BEEB1D /* TableSceneRouter.swift in Sources */,
 				AD854D3D1D419D7D00BEEB1D /* TableSceneModels.swift in Sources */,
+				AD4E9F3D1D41A587000F6E49 /* LICENSE.swift in Sources */,
 				AD854D401D419D7D00BEEB1D /* TableSceneViewController.swift in Sources */,
+				AD4E9F4B1D41A987000F6E49 /* DetailedSceneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
