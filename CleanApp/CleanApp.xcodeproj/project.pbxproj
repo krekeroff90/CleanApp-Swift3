@@ -11,6 +11,13 @@
 		AD6AC5171D4189070048D195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6AC5151D4189070048D195 /* Main.storyboard */; };
 		AD6AC5191D4189070048D195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6AC5181D4189070048D195 /* Assets.xcassets */; };
 		AD6AC51C1D4189070048D195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6AC51A1D4189070048D195 /* LaunchScreen.storyboard */; };
+		AD854D3B1D419D7D00BEEB1D /* TableSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D341D419D7D00BEEB1D /* TableSceneConfigurator.swift */; };
+		AD854D3C1D419D7D00BEEB1D /* TableSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D351D419D7D00BEEB1D /* TableSceneInteractor.swift */; };
+		AD854D3D1D419D7D00BEEB1D /* TableSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D361D419D7D00BEEB1D /* TableSceneModels.swift */; };
+		AD854D3E1D419D7D00BEEB1D /* TableScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D371D419D7D00BEEB1D /* TableScenePresenter.swift */; };
+		AD854D3F1D419D7D00BEEB1D /* TableSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D381D419D7D00BEEB1D /* TableSceneRouter.swift */; };
+		AD854D401D419D7D00BEEB1D /* TableSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D391D419D7D00BEEB1D /* TableSceneViewController.swift */; };
+		AD854D411D419D7D00BEEB1D /* TableSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D3A1D419D7D00BEEB1D /* TableSceneWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		AD6AC5181D4189070048D195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD6AC51B1D4189070048D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD6AC51D1D4189070048D195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD854D341D419D7D00BEEB1D /* TableSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSceneConfigurator.swift; path = Scenes/TableScene/TableSceneConfigurator.swift; sourceTree = "<group>"; };
+		AD854D351D419D7D00BEEB1D /* TableSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSceneInteractor.swift; path = Scenes/TableScene/TableSceneInteractor.swift; sourceTree = "<group>"; };
+		AD854D361D419D7D00BEEB1D /* TableSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSceneModels.swift; path = Scenes/TableScene/TableSceneModels.swift; sourceTree = "<group>"; };
+		AD854D371D419D7D00BEEB1D /* TableScenePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableScenePresenter.swift; path = Scenes/TableScene/TableScenePresenter.swift; sourceTree = "<group>"; };
+		AD854D381D419D7D00BEEB1D /* TableSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSceneRouter.swift; path = Scenes/TableScene/TableSceneRouter.swift; sourceTree = "<group>"; };
+		AD854D391D419D7D00BEEB1D /* TableSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSceneViewController.swift; path = Scenes/TableScene/TableSceneViewController.swift; sourceTree = "<group>"; };
+		AD854D3A1D419D7D00BEEB1D /* TableSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSceneWorker.swift; path = Scenes/TableScene/TableSceneWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,20 @@
 			path = CleanApp;
 			sourceTree = "<group>";
 		};
+		AD854D331D419D3A00BEEB1D /* TableScene */ = {
+			isa = PBXGroup;
+			children = (
+				AD854D341D419D7D00BEEB1D /* TableSceneConfigurator.swift */,
+				AD854D351D419D7D00BEEB1D /* TableSceneInteractor.swift */,
+				AD854D361D419D7D00BEEB1D /* TableSceneModels.swift */,
+				AD854D371D419D7D00BEEB1D /* TableScenePresenter.swift */,
+				AD854D381D419D7D00BEEB1D /* TableSceneRouter.swift */,
+				AD854D391D419D7D00BEEB1D /* TableSceneViewController.swift */,
+				AD854D3A1D419D7D00BEEB1D /* TableSceneWorker.swift */,
+			);
+			name = TableScene;
+			sourceTree = "<group>";
+		};
 		AD9D31911D419BD5005B2EAE /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +120,7 @@
 		AD9D31941D419BF8005B2EAE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AD854D331D419D3A00BEEB1D /* TableScene */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -191,7 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD854D3B1D419D7D00BEEB1D /* TableSceneConfigurator.swift in Sources */,
+				AD854D411D419D7D00BEEB1D /* TableSceneWorker.swift in Sources */,
 				AD6AC5121D4189070048D195 /* AppDelegate.swift in Sources */,
+				AD854D3E1D419D7D00BEEB1D /* TableScenePresenter.swift in Sources */,
+				AD854D3C1D419D7D00BEEB1D /* TableSceneInteractor.swift in Sources */,
+				AD854D3F1D419D7D00BEEB1D /* TableSceneRouter.swift in Sources */,
+				AD854D3D1D419D7D00BEEB1D /* TableSceneModels.swift in Sources */,
+				AD854D401D419D7D00BEEB1D /* TableSceneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
