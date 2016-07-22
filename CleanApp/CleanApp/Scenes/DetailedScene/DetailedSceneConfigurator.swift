@@ -27,12 +27,16 @@ class DetailedSceneConfigurator {
   
   // MARK: Configuration
   func configure(viewController: DetailedSceneViewController) {
+    
     let router = DetailedSceneRouter()
     router.viewController = viewController
+    
     let presenter = DetailedScenePresenter()
     presenter.output = viewController
+    
     let interactor = DetailedSceneInteractor()
     interactor.output = presenter
+    
     viewController.output = interactor
     viewController.router = router
   }

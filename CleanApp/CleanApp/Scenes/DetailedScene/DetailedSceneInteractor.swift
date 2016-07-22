@@ -17,6 +17,7 @@ protocol DetailedSceneInteractorOutput {
 }
 
 class DetailedSceneInteractor: DetailedSceneInteractorInput {
+  
   var output: DetailedSceneInteractorOutput!
   var worker: DetailedSceneWorker!
   // MARK: Business logic
