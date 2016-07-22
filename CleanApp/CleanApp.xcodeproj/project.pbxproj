@@ -28,6 +28,8 @@
 		AD854D411D419D7D00BEEB1D /* TableSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D3A1D419D7D00BEEB1D /* TableSceneWorker.swift */; };
 		ADAE3AEA1D41AC29007E84BB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3AE91D41AC29007E84BB /* Helper.swift */; };
 		ADAE3AEC1D41AC37007E84BB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3AEB1D41AC37007E84BB /* Config.swift */; };
+		ADAE3AEE1D41B021007E84BB /* YoutubeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3AED1D41B021007E84BB /* YoutubeManager.swift */; };
+		ADAE3AF01D41B08E007E84BB /* VideoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3AEF1D41B08E007E84BB /* VideoEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		AD854D3A1D419D7D00BEEB1D /* TableSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSceneWorker.swift; path = Scenes/TableScene/TableSceneWorker.swift; sourceTree = "<group>"; };
 		ADAE3AE91D41AC29007E84BB /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		ADAE3AEB1D41AC37007E84BB /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		ADAE3AED1D41B021007E84BB /* YoutubeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeManager.swift; sourceTree = "<group>"; };
+		ADAE3AEF1D41B08E007E84BB /* VideoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 				AD6AC51D1D4189070048D195 /* Info.plist */,
 				ADAE3AE91D41AC29007E84BB /* Helper.swift */,
 				ADAE3AEB1D41AC37007E84BB /* Config.swift */,
+				ADAE3AEF1D41B08E007E84BB /* VideoEntity.swift */,
 			);
 			name = SupportFiles;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 		AD9D31961D419C24005B2EAE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				ADAE3AED1D41B021007E84BB /* YoutubeManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -262,12 +268,14 @@
 				AD4E9F461D41A987000F6E49 /* DetailedSceneConfigurator.swift in Sources */,
 				AD4E9F481D41A987000F6E49 /* DetailedSceneModels.swift in Sources */,
 				AD854D411D419D7D00BEEB1D /* TableSceneWorker.swift in Sources */,
+				ADAE3AF01D41B08E007E84BB /* VideoEntity.swift in Sources */,
 				AD4E9F491D41A987000F6E49 /* DetailedScenePresenter.swift in Sources */,
 				AD6AC5121D4189070048D195 /* AppDelegate.swift in Sources */,
 				AD854D3E1D419D7D00BEEB1D /* TableScenePresenter.swift in Sources */,
 				AD854D3C1D419D7D00BEEB1D /* TableSceneInteractor.swift in Sources */,
 				ADAE3AEA1D41AC29007E84BB /* Helper.swift in Sources */,
 				AD4E9F4C1D41A987000F6E49 /* DetailedSceneWorker.swift in Sources */,
+				ADAE3AEE1D41B021007E84BB /* YoutubeManager.swift in Sources */,
 				AD4E9F471D41A987000F6E49 /* DetailedSceneInteractor.swift in Sources */,
 				ADAE3AEC1D41AC37007E84BB /* Config.swift in Sources */,
 				AD4E9F4A1D41A987000F6E49 /* DetailedSceneRouter.swift in Sources */,
