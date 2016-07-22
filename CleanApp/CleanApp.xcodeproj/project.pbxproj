@@ -26,6 +26,8 @@
 		AD854D3F1D419D7D00BEEB1D /* TableSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D381D419D7D00BEEB1D /* TableSceneRouter.swift */; };
 		AD854D401D419D7D00BEEB1D /* TableSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D391D419D7D00BEEB1D /* TableSceneViewController.swift */; };
 		AD854D411D419D7D00BEEB1D /* TableSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD854D3A1D419D7D00BEEB1D /* TableSceneWorker.swift */; };
+		ADAE3AEA1D41AC29007E84BB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3AE91D41AC29007E84BB /* Helper.swift */; };
+		ADAE3AEC1D41AC37007E84BB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAE3AEB1D41AC37007E84BB /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		AD854D381D419D7D00BEEB1D /* TableSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSceneRouter.swift; path = Scenes/TableScene/TableSceneRouter.swift; sourceTree = "<group>"; };
 		AD854D391D419D7D00BEEB1D /* TableSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSceneViewController.swift; path = Scenes/TableScene/TableSceneViewController.swift; sourceTree = "<group>"; };
 		AD854D3A1D419D7D00BEEB1D /* TableSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSceneWorker.swift; path = Scenes/TableScene/TableSceneWorker.swift; sourceTree = "<group>"; };
+		ADAE3AE91D41AC29007E84BB /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		ADAE3AEB1D41AC37007E84BB /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 			children = (
 				AD6AC51A1D4189070048D195 /* LaunchScreen.storyboard */,
 				AD6AC51D1D4189070048D195 /* Info.plist */,
+				ADAE3AE91D41AC29007E84BB /* Helper.swift */,
+				ADAE3AEB1D41AC37007E84BB /* Config.swift */,
 			);
 			name = SupportFiles;
 			sourceTree = "<group>";
@@ -260,8 +266,10 @@
 				AD6AC5121D4189070048D195 /* AppDelegate.swift in Sources */,
 				AD854D3E1D419D7D00BEEB1D /* TableScenePresenter.swift in Sources */,
 				AD854D3C1D419D7D00BEEB1D /* TableSceneInteractor.swift in Sources */,
+				ADAE3AEA1D41AC29007E84BB /* Helper.swift in Sources */,
 				AD4E9F4C1D41A987000F6E49 /* DetailedSceneWorker.swift in Sources */,
 				AD4E9F471D41A987000F6E49 /* DetailedSceneInteractor.swift in Sources */,
+				ADAE3AEC1D41AC37007E84BB /* Config.swift in Sources */,
 				AD4E9F4A1D41A987000F6E49 /* DetailedSceneRouter.swift in Sources */,
 				AD854D3F1D419D7D00BEEB1D /* TableSceneRouter.swift in Sources */,
 				AD854D3D1D419D7D00BEEB1D /* TableSceneModels.swift in Sources */,
